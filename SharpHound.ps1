@@ -172,5 +172,4 @@ function IBH
     $EncodedCompressedFile = 'SGVsbG8='
 	$DS = New-Object IO.Compression.DeflateStream([IO.MemoryStream][Convert]::FromBase64String($EncodedCompressedFile),[IO.Compression.CompressionMode]::Decompress)
 	$UFB = New-Object Byte[](1046588)
-    $DS.Read($UFB, 0, 1046588) | Out-Null
 }
